@@ -1,0 +1,8 @@
+default:
+  debug: true
+  database:
+    user: ${default.database.name}_prod
+    password:
+      file: /run/secrets/database_password
+  application:
+    version: ${default.application.version}-prod

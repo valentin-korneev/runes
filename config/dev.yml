@@ -1,0 +1,8 @@
+default:
+  debug: true
+  database:
+    user: ${default.database.name}_dev
+    password: owner-dev
+  application:
+    version: ${default.application.version}-dev
+    authors: [Raman, Marozau]

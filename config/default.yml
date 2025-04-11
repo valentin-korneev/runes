@@ -1,0 +1,11 @@
+default:
+  debug: false
+  database:
+    version: 17.4-alpine3.21
+    host: database
+    port: 5432
+    name: runes
+  application:
+    name: runes
+    version: 0.0.1
+

@@ -1,0 +1,28 @@
+name: ansuz
+
+services:
+  default:
+    build:
+      context: .
+    ports:
+      - "8001:8000"
+  dev:
+    build:
+      context: .
+      args:
+        ENV: dev
+    ports:
+      - "8002:8000"
+  prod:
+    build:
+      context: .
+      args:
+        ENV: prod
+    ports:
+      - "8003:8000"
+    secrets:
+      - database_password
+
+secrets:
+  database_password:
+    file: ./config/secrets/database_password.txt
